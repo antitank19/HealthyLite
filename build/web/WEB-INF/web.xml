@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>adminUsername</param-name>
+        <param-value>admin</param-value>
+    </context-param>
+    <context-param>
+        <param-name>adminPassword</param-name>
+        <param-value>admin</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>UpdateAccount</servlet-name>
+        <servlet-class>servlet.UpdateAccount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OnlineShop</servlet-name>
+        <servlet-class>servlets.OnlineShop</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateContrroler</servlet-name>
+        <servlet-class>servlets.CreateContrroler</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateAccount</servlet-name>
+        <url-pattern>/UpdateAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OnlineShop</servlet-name>
+        <url-pattern>/OnlineShop</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateContrroler</servlet-name>
+        <url-pattern>/CreateContrroler</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            60
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>OnlineShop</welcome-file>
+    </welcome-file-list>
+</web-app>

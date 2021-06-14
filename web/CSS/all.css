@@ -1,0 +1,187 @@
+
+
+header, nav, main, footer, aside{
+    border: black solid 1px;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    padding: 0.5rem;
+    background-color: #EEEEEE24;
+    border-radius: 0.5rem;
+}
+
+header .pageIcon img{
+    width: 80%;
+}
+header .left-side{
+    display: inline-block;
+}
+header .right-side{
+    display: inline-block;
+    text-align: right;
+    float: right;
+    width: 60%;
+}
+header .right-side .shopName{
+    text-align: center;
+}
+aside{
+    display: none;
+    text-align: center;
+    vertical-align: top;
+}
+main{
+    min-height: 60vh;
+    display: inline-block;
+    width:  100%;
+}
+nav .mainNav, nav .subNav{
+    align-items: center;
+    text-align: center;
+}
+nav .mainNav .mainTab, nav .mainNav .mainAdminTab{
+    background-color: #1fb7b7;
+    display: inline-block;
+    line-height: 2rem;
+    width: 32.5%;
+}
+nav .mainNav .mainAdminTab{
+    width: 49.5%;
+}
+nav .subNav .subTab{
+    display: inline-block;
+    line-height: 1.5rem;
+    width: 49%;
+    background-color: #00d0ff80;
+}
+nav .mainNav .mainTab:hover, nav .mainNav .mainAdminTab:hover, nav .subNav .subTab:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+nav .mainNav .mainTab.active, nav .mainNav .mainAdminTab.active, nav .subNav .subTab.active{
+    border: red solid 0.1rem;
+}
+.productCard, .cartCard, .accountInfoCard, .ratingCard{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: black solid 1px;
+    border-radius: 0.5rem;
+    display: block;
+    background-color: lightgrey;
+}
+.productCard .productRating{
+    min-width: 14rem;
+}
+input{
+    width: fit-content;
+}
+a .fa-cart-plus,a .fa-minus-square{
+    font-size: 2rem;
+    float: right;
+}
+.fa-cart-plus:hover{
+    color: red;
+}
+.fa-star, .fa-star-half-alt{
+    color: #ffc700;
+    font-size: 1.5rem;
+}
+/*rating bar*/
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+}
+
+.middle {
+    margin-top:10px;
+    float: left;
+    width: 70%;
+}
+
+/* Place text to the right */
+.right {
+    text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/*pop up*/
+.popUp{
+    padding: 0.5rem;
+}
+.popUp:not(.displayNone) {
+    position: fixed;
+    z-index: 140;
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    max-height: 70%;
+    top: 15vh;
+    left: 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    animation: fade-slide-in 0.3s ease-out;
+    pointer-events: all;
+    overflow-y: scroll;
+}
+/*darker background go with pop up*/
+#backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 120;
+    pointer-events: all;
+}
+.displayNone{
+    display: none !important; 
+}
+@media all and (min-width: 900px) {
+    main {
+        width: 76%;
+    }
+    aside.adBar1{
+        display: inline-block;
+        width: 17%;
+        background-color: #EEEEEE50;
+    }
+    .productCard, .cartCard, .accountInfoCard, .ratingCard{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+/*@media all and (min-width: 1200px) {
+    main {
+        width: 66% ;
+    }
+    aside.adBar1, aside.adBar2{
+        display: inline-block;
+        width: 15%;
+    }
+    .productCard, .cartCard, .accountInfoCard, .ratingCard{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}*/
